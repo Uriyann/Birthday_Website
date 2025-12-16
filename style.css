@@ -3,6 +3,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Coiny&family=Nerko+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Coiny&family=Dancing+Script:wght@400..700&family=Nerko+One&display=swap');
 
+:root{
+    --primary: #fff;
+    --bg-color: rgb(5, 53, 61);
+    --bg-envelope-color: #ff97d4;
+    --envelope-tab: #ff82cf;
+    --envelope-cover: #ffb7e1;
+    --shadow-color: rgba(0, 0, 0, 0.2);
+    --txt-color: #444;
+    --heart-color: #FF6767;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -10,7 +21,328 @@
 }
 
 body {
+    width: 100vw;
+    align-items: center;
+    justify-content: center;
     background-color: #FFA8D8;
+}
+
+.main-container {
     max-width: 1400px;
-    max-height: 100%;
+    margin: 0 auto;
+}
+
+.rope_left {
+    position: absolute;
+    width: 1095.622px;
+    height: 1095.622px;
+    left: -50px;
+    top: 0px;
+}
+
+.rope_right {
+    position: absolute;
+    width: 1095.622px;
+    height: 1095.622px;
+    right: -50px;
+    top: 0px;
+}
+
+.hat {
+    position: absolute;
+    width: 550px;
+    height: 550px;
+    top: 25px;
+    left: calc(50% - 415px);
+}
+
+.surprise {
+    position: absolute;
+    width: 254px;
+    height: 254px;
+    top: 380px;
+    left: 150px;
+}
+
+.cake {
+    position: absolute;
+    width: 782px;
+    height: 782px;
+    top: 120px;
+    right: 130px;
+}
+
+.gift {
+    position: absolute;
+    width: 676px;
+    height: 676px;
+    top: 390px;
+    right: 400px;
+}
+
+.bird {
+    position: absolute;
+    width: 424px;
+    height: 424px;
+    top: 550px;
+    left: 110px;
+}
+
+.dog {
+    position: absolute;
+    width: 410px;
+    height: 410px;
+    top: 600px;
+    left: 250px;
+}
+
+.main-text {
+    display: flex;
+    width: 729px;
+    flex-direction: column;
+    align-items: center;
+    gap: 31px;
+    z-index: 100;
+    margin-top: 220px;
+    margin-left: 0px;
+}
+
+.title {
+    z-index: 100;
+    height: 254px;
+    align-self: stretch;
+    color: #E8E8E8;
+    text-align: center;
+    text-shadow: 3px 4px 9.4px #242424;
+    font-family: Coiny;
+    font-size: 96px;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: -7.68px;
+}
+
+.title span {
+    color: #DD4D4D;
+}
+
+.date-card {
+    z-index: 100;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 34px;
+    padding: 14px 31px;
+    width: 442px;
+    height: 68px;
+    background: #FF6767;
+    border: 3px solid #000000;
+    border-radius: 65px;
+}
+
+.date-card .date-text {
+    flex: 1;
+    text-align: center;
+    color: #000000;
+    font-family: 'Nerko One', cursive;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: -1.44px;
+}
+
+.date-card .star {
+    width: 36px;
+    height: 36px;
+}
+
+.btn-card {
+    z-index: 100;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    color: #000000;
+    gap: 42px;
+    padding: 9px 28px;
+    width: 276px;
+    height: 53px;
+    border-radius: 62px;
+    border: 3px solid #242424;
+    background: #FF6767;
+    color: #000;
+    text-align: center;
+    font-family: "Nerko One";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.btn-card .bear {
+    width: 33px;
+    height: 33px;
+}
+
+.name-card {
+    z-index: 100;
+    position: absolute;
+    display: flex;
+    width: 348px;
+    height: 55px;
+    padding: 8px 22px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 62px;
+    border: 3px solid #242424;
+    background: #FF6767;
+    top: 580px;
+    right: 360px;
+}
+
+.name-card h1 {
+    width: 240px;
+    color: #000;
+    text-align: center;
+    font-family: "Dancing Script";
+    font-size: 32px;
+    font-style: normal;
+    font-weight: bold;
+    line-height: normal;
+}
+
+.container {
+    z-index: 200;
+    display: flex;
+    place-items: center;
+}
+.container > .envelope-wrapper {
+    background: var(--bg-envelope-color);
+    box-shadow: 0 0 40px var(--shadow-color);
+}
+.envelope-wrapper > .envelope {
+    position: relative;
+    width: 300px;
+    height: 230px;
+}
+.envelope-wrapper > .envelope::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    z-index: 2;
+    border-top: 130px solid var(--envelope-tab);
+    border-right: 150px solid transparent;
+    border-left: 150px solid transparent;
+    transform-origin: top;
+    transition: all 0.5s ease-in-out 0.7s;
+}
+.envelope-wrapper > .envelope::after {
+    content: "";
+    position: absolute;
+    z-index: 2;
+    width: 0px;
+    height: 0px;
+    border-top: 130px solid transparent;
+    border-right: 150px solid var(--envelope-cover);
+    border-bottom: 100px solid var(--envelope-cover);
+    border-left: 150px solid var(--envelope-cover);
+}
+.envelope > .letter {
+    position: absolute;
+    right: 20%;
+    bottom: 0;
+    width: 54%;
+    height: 80%;
+    background: var(--primary);
+    text-align: center;
+    transition: all 1s ease-in-out;
+    box-shadow: 0 0 5px var(--shadow-color);
+    padding: 20px 10px;
+}
+
+.envelope > .letter > .text {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: var(--txt-color);
+    text-align: left;
+    font-size: 10px;
+    }
+    .heart {
+    position: absolute;
+    top: 52%;
+    left: 50%;
+    width: 15px;
+    height: 15px;
+    background: var(--heart-color);
+    z-index: 4;
+    transform: translate(-50%, -20%) rotate(45deg);
+    transition: transform 0.5s ease-in-out 1s;
+    box-shadow: 0 1px 6px var(--shadow-color);
+    cursor: pointer;
+}
+.heart:before, 
+.heart:after {
+    content: "";
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background-color: var(--heart-color);
+    border-radius: 50%;
+}
+.heart:before {
+top: -7.5px;    
+}   
+.heart:after {
+right: 7.5px;   
+}
+.flap > .envelope:before {
+    transform: rotateX(180deg);
+    z-index: 0;
+}
+.flap > .envelope > .letter {
+    bottom: 100px;
+    transform: scale(1.5);
+    transition-delay: 1s;
+}
+.flap > .heart {
+    transform: rotate(90deg);
+    transition-delay: 0.4s;
+}
+
+/* Modal Styles */
+.modal {
+    /* display: none; */
+    opacity: 0;
+    visibility: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+    transition: opacity 0.3s ease;
+}
+
+.modal.show {
+    opacity: 1;
+    visibility: visible;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.backdrop {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 1;
+    transition: opacity 0.3s ease;
+}
+
+.container {
+    position: relative;
+    z-index: 2;
+    transition: transform 0.3s ease;
 }
