@@ -1,0 +1,16 @@
+/* FONT IMPORT */
+@import url('https://fonts.googleapis.com/css2?family=Coiny&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Coiny&family=Nerko+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Coiny&family=Dancing+Script:wght@400..700&family=Nerko+One&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #FFA8D8;
+    max-width: 1400px;
+    max-height: 100%;
+}
