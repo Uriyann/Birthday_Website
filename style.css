@@ -1,21 +1,27 @@
 body{
     background-color: #1c1c1c;
     color: beige;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
 }
 
 div{
-    margin-top: 200px;
     text-align: center;
     vertical-align: middle;
     user-select: none;
+    max-width: 90%;
 }
 
 button {
-    font-size: 22px;
-    padding: 12px 24px;
+    font-size: 1.2rem;
+    padding: 0.75rem 1.5rem;
     border: none;
     border-radius: 4px;
     cursor: pointer;
+    margin: 0.5rem;
     }
     
 #Yes {
@@ -26,4 +32,14 @@ button {
 #noButton {
     background-color: #000000;
     color: white;
+}
+
+@media (max-width: 768px) {
+    div h1 {
+        font-size: 1.5rem;
+    }
+    button {
+        font-size: 1rem;
+        padding: 0.5rem 1rem;
+    }
 }
