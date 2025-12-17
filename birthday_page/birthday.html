@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday!!!</title>
+    <link rel="stylesheet" href="birthday.css">
+</head>
+<body>
+    <main class="main-container">
+        <div class="img">
+            <img src="../_assets/rope_left.png" alt="rope_left" class="rope_left">
+            <img src="../_assets/rope_right.png" alt="rope_right" class="rope_right">
+            <img src="../_assets/hat.png" alt="hat" class="hat">
+            <img src="../_assets/surprise.png" alt="surprise" class="surprise">
+            <img src="../_assets/cake.png" alt="cake" class="cake">
+            <img src="../_assets/gift.png" alt="gift" class="gift">
+            <img src="../_assets/bird.png" alt="bird" class="bird">
+            <img src="../_assets/dog.png" alt="dog" class="dog">
+            <div class="main-text">
+                <h1 class="title">
+                    HAPPY
+                    <span>BIRTHDAY!!!</span>
+                </h1>
+                <div class="date-card">
+                    <img src="../_assets/Star.png" alt="star" class="star">
+                    <h2 class="date-text">18th of December</h2>
+                    <img src="../_assets/Star.png" alt="star" class="star">
+                </div>
+                <button class="btn-card" onclick="openModal()">Click nga po rito <img src="../_assets/bear.png" alt="bear" class="bear"></button>
+            </div>
+
+            <div class="name-card">
+                <h1>Dear Aluma</h1>
+            </div>
+        </div>
+        <div id="modal" class="modal">
+            <div id="backdrop" class="backdrop"></div>
+            <div class="container">
+                <div class="envelope-wrapper">
+                    <div class="envelope">
+                        <div class="letter">
+                            <div class="text">
+                                <strong>Dear Aluma</strong>
+                                <p>
+                                    Happy Birthday! May this new chapter of your life be filled with joy, laughter, and love. 
+                                    As my friend, I will support you throughout your journey. I wish you all the best!
+                                    May your endavours come true.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="heart"></div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        function openModal() {
+            document.getElementById('modal').classList.add('show');
+        }
+
+        function closeModal() {
+            document.getElementById('modal').classList.remove('show');
+        }
+
+        document.getElementById('backdrop').addEventListener('click', closeModal);
+
+        const envelope = document.querySelector('.envelope-wrapper');
+        envelope.addEventListener('click', () => {
+            envelope.classList.toggle('flap');
+        });
+    </script>
+
+</body>
+</html>
